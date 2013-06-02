@@ -1,4 +1,8 @@
 Testapp::Application.routes.draw do
+  resources :microposts
+
+  resources :users
+
   get "my/lucia"
 
   get "say/hello"
