@@ -14,6 +14,10 @@ group :development, :test do
   gem 'spork', '0.9.2'
 end
 
+group :development do
+  gem 'annotate', '2.5.0'
+end
+
 group :test do
   gem 'capybara', '1.1.2'
   gem 'rb-inotify', '0.8.8'
@@ -53,3 +57,6 @@ gem 'jquery-rails', '2.0.2'
 gem 'execjs'
 gem 'therubyracer'
 gem 'sprockets', '~> 2.0'
+
+# ----- ADDED BY LIANG 2013/06/13 -----
+gem 'bcrypt-ruby', '3.0.1'
