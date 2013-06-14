@@ -4,6 +4,7 @@ Testapp::Application.routes.draw do
 
   resources :users
   resources :myusers
+  resources :sessions, only: [:new, :create, :destroy]
 
   get "users/new"
 
@@ -17,10 +18,12 @@ Testapp::Application.routes.draw do
   match '/about', to: 'static_pages#about'
   match '/help', to: 'static_pages#help'
   match '/contact', to: 'static_pages#contact'
-  match '/signup', to: 'users#new'
+  match '/signup', to: 'myusers#new'
+  match '/signin', to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
+  
 
   resources :microposts
-
 
   get "my/lucia"
 
@@ -29,6 +32,8 @@ Testapp::Application.routes.draw do
   get "say/goodbye"
 
   resources :my
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
