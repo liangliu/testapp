@@ -1,5 +1,10 @@
 Testapp::Application.routes.draw do
 
+#  get "myusers/new"
+
+  resources :users
+  resources :myusers
+
   get "users/new"
 
   root :to => 'static_pages#home'
@@ -16,7 +21,6 @@ Testapp::Application.routes.draw do
 
   resources :microposts
 
-  resources :users
 
   get "my/lucia"
 
