@@ -57,8 +57,11 @@ gem 'jquery-rails', '2.0.2'
 
 # ----- ADDED BY LIANG 2012/05/11 -----
 gem 'execjs'
-gem 'therubyracer'
+gem 'therubyracer', '~>0.10.1'
 gem 'sprockets', '~> 2.0'
 
 # ----- ADDED BY LIANG 2013/06/13 -----
 gem 'bcrypt-ruby', '3.0.1'
+gem 'faker', '1.0.1'
+gem 'will_paginate', '3.0.3'
+gem 'bootstrap-will_paginate', '0.0.6'
